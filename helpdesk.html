@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title> Helpdesk 3°B - Painel de Atendimento </title>
+</head>
+<body>
+    <header>
+        <h1> Central de Suporte de TI </h1>
+        <hr>
+    </header>
+    <main>
+        <section>
+            <h2>Resumo Operacional </h2>
+            <u1> 
+                <li><strong> Chamados Abertos: </strong></li>
+                <li><strong> Em andamento: </strong></li>
+                <li><strong> Concluidos Hoje: </strong></li>
+            </u1>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2> Abrir novo chamado </h2>
+            <form>
+                <label for="solicitante"> Nome do solicitante</label><br>
+                <input type="text" id="solicitante" required> <br><br>
+
+                <label for="setor">Setor:</label><br>
+                <select id="setor" required>
+                    <option value="">Selecione o Setor...</option>
+                    <option value="financeiro">Financeiro</option>
+                    <option value="rh">Recursos Humanos</option>
+                    <option value="produção">Produção</option>
+                    <option value="vendas">Vendas</option>
+                </select><br><br>
+
+                <label> Prioridade do chamado:</label><br>
+                <input type="radio" id="p_baixa" name="prioridade" value="baixa">
+                <label for="p_baixa">Baixa</label>
+
+                <input type="radio" id="p_media" name="prioridade" value="media" >
+                <label for="p_media">Media</label>
+
+                <input type="radio" id="p_critica" name="prioridade" value="Alta">
+                <label for="p_critica">alta</label><br><br>
+
+                <label> Equipamentos Envolvidos </label><br>
+                <input type="checkbox" id="eq_monitor" value="monitor">
+                <label for="eq_monitor"> Monitor </label>
+
+                <input type="checkbox" id="eq_perifericos" value="perifericos">
+                <label for="eq_perifericos"> Teclado/Mouse </label>
+
+                <input type="checkbox" id="eq_pc" value="computador">
+                <label for="eq_computador"> Computador/Notebook </label>
+
+                <input type="checkbox" id="eq_impressora" value="impressora">
+                <label for="eq_impressora"> Impressora </label><br>
+                <br>
+
+                <label for="descrition"> Descrição Detalhada</label><br>
+                <textarea id="descrição" rows="4" cols="50" placeholder="Descreva o erro..." required></textarea>
+
+                <button type="submit"> Enviar Chamado</button>
+                <button type="reset">Limpar</button>
+            </form>
+        </section>
+
+
+        <hr>
+
+        <section>
+            <h2> Chamados Recentes </h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th> Setor</th>
+                        <th> ID Chamado</th>
+                        <th> Solicitante</th>
+                        <th> Prioridade</th>
+                        <th> Data de Abertura</th>
+                        <th> Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="4"> Financeiro</td>
+                        <td>#1092</td>
+                        <td> Julia</td>
+                        <td> Alta</td>
+                        <td> 04/08/2026</td>
+                        <td> Em Aberto</td>
+                    </tr>
+                    <tr>
+                        <td> #1088</td>
+                        <td> Marta</td>
+                        <td> Média</td>
+                        <td> 04/08/2026</td>
+                        <td> Em Aberto</td>
+                    </tr>
+                    <tr>
+                        <td> #1076</td>
+                        <td> José</td>
+                        <td> Baixa</td>
+                        <td> 03/08/2026</td>
+                        <td> Concluida</td>
+                    </tr>
+                    <tr>
+                        <td> #1063</td>
+                        <td> Victor</td>
+                        <td> Alta</td>
+                        <td> 02/08/2026</td>
+                        <td> Concluida</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <hr>
+
+    <footer>
+        <p> &copy 2026 TI 3°B </p>
+    </footer>
+</body>
+</html>
+
